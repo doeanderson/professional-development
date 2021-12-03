@@ -30,13 +30,15 @@
        </div>
 
       <!--  slider -->
-      <input type="range" id="pricingSlider" name="pricingSlider"
+      <input class="test bg-lilac w-full  mt-6 relative appearance-none h-1.5" type="range" id="pricingSlider" name="pricingSlider"
       min="0" max="4" value="0">
 
 
-      <div>
-        <label for="pricingType">Monthly</label>
-          <input type="checkbox" id="pricingType" name="pricingType">
+      <div class="relative w-2 h-2">
+        <label class="relative" for="pricingType">Monthly
+          <input class="hidden" type="checkbox" id="pricingType" name="pricingType">
+          <span class="slider"></span>
+        </label>
         <label for="pricingType">Yearly</label>
       </div>
        <!-- <div class="bg-lilac w-full h-1.5 mt-6 relative">
