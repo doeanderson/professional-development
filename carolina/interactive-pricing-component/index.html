@@ -16,26 +16,28 @@
           <p class="font-semibold text-grey">Sign-up for our 30-day trial. No credit card required.</p>
         </div>
       </div>
-      <div class="bg-pattern w-full h-full absolute top-0 right-0 z-0"></div>
+      <div class="bg-pattern bg-left-top md:bg-right-top w-full h-full absolute top-0 right-0 z-0"></div>
 
       <div class="bg-white max-w-lg m-auto mt-10 text-grey py-8 shadow-lg z-10 relative rounded-md px-4 md:px-0">
-        <div class="flex justify-between px-8">
-          <div class="uppercase">
+        <div class="flex justify-between px-8 flex-wrap">
+          <div class="uppercase w-full md:w-1/2 text-center md:text-left">
             <span id='pageViews'>
               10k
             </span>
-            pageviews</div>
-          <div class="text-purple font-extrabold text-4xl flex items-center space-x-2">
+            pageviews
+          </div>
+          <div class="justify-center md:justify-end order-last md:order-none text-purple font-extrabold text-4xl flex items-center space-x-2 w-full md:w-1/2">
             $<span id='pricePerMonth'>8</span>
             <span class="text-grey font-semibold text-base">/month</span>
           </div>
+
+          <!--  slider -->
+          <div class="max-w-md mx-auto w-full my-7 md:my-0">
+            <input class="bg-lilac w-full  mt-6 relative appearance-none h-1.5" type="range" id="pricingSlider" name="pricingSlider"
+          min="0" max="4" value="2">
+          </div>
        </div>
 
-        <!--  slider -->
-        <div class="max-w-md mx-auto">
-          <input class="bg-lilac w-full  mt-6 relative appearance-none h-1.5" type="range" id="pricingSlider" name="pricingSlider"
-        min="0" max="4" value="0">
-        </div>
 
         <div class="my-12 relative w-full flex justify-center md:justify-end items-center px-2 space-x-2 transition-colors">
           <label class="relative text-xs" for="pricingType">Monthly Billing</label>
