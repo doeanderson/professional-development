@@ -38,7 +38,6 @@ const pricePerPageViews = [
 
     //set background color
     const backgroundWidth = ((event.target.value / event.target.max) * 100);
-    console.log(backgroundWidth )
     event.target.style.backgroundSize = `${backgroundWidth}% 100%`;
 
     priceElement.innerText = getPricing(pricingInfo.price);
