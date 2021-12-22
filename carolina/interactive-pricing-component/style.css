@@ -3,10 +3,8 @@
 @tailwind utilities;
 
 input[type=range]::-moz-range-thumb {
-  @apply bg-green cursor-pointer h-8 w-8 border-none rounded-full;
+  @apply bg-green bg-no-repeat bg-center cursor-pointer h-8 w-8 border-none rounded-full;
   background-image: url('../images/icon-slider.svg');
-  background-repeat: no-repeat;
-  background-position: center;
   box-shadow: 0 10px 20px 5px rgba(16, 216, 196, 0.5);
 }
 
@@ -15,10 +13,9 @@ input[type=range]:active::-moz-range-thumb {
 }
 
 input[type=range] {
-  @apply bg-lilac;
+  @apply bg-lilac bg-no-repeat;
   background-image: linear-gradient(#A4F3EB, #A4F3EB);
   background-size: 0% 100%;
-  background-repeat: no-repeat;
 }
 
 input[type=range]:focus {
@@ -27,23 +24,9 @@ input[type=range]:focus {
 
 .toggle-container {
   width: 45px;
-  position: relative;
-}
-
-.toggle-container input {
-  opacity: 0;
-  width: 0;
-  height: 0;
 }
 
 .toggle {
-  position: absolute;
-  cursor: pointer;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: #CFD8EF;
   -webkit-transition: .4s;
   transition: .4s;
   border-radius: 34px;
@@ -76,11 +59,8 @@ input:checked + .toggle:before {
 
 .image-circles {
   background-image: url("../images/pattern-circles.svg");
-  background-repeat: no-repeat;
-  background-position: center;
 }
 
 .bg-pattern {
   background-image: url("../images/bg-pattern.svg");
-  background-repeat: no-repeat;
 }
