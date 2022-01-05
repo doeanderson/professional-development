@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactive Pricing Component</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;800&display=swap" rel="stylesheet">
+  </head>
+  <body>
+    <div class="w-screen h-screen relative px-4 md:px-0">
+      <div class="text-center font-sans pt-8 z-10 relative">
+        <div class="image-circles bg-no-repeat bg-center py-16">
+          <h1 class="text-purple font-extrabold text-2xl md:text-3xl">Simple, traffic-based pricing</h1>
+          <p class="font-semibold text-grey">Sign-up for our 30-day trial. No credit card required.</p>
+        </div>
+      </div>
+      <div class="bg-pattern bg-no-repeat bg-left-top md:bg-right-top w-full h-full absolute top-0 right-0 z-0"></div>
+
+      <div class="bg-white max-w-lg m-auto mt-10 text-grey py-8 shadow-lg z-10 relative rounded-md px-4 md:px-0">
+        <div class="flex justify-between px-8 flex-wrap">
+          <div class="uppercase w-full md:w-1/2 text-center md:text-left">
+            <span id="pageViews">
+              10k
+            </span>
+            pageviews
+          </div>
+          <div class="justify-center md:justify-end order-last md:order-none text-purple font-extrabold text-4xl flex items-center space-x-2 w-full md:w-1/2">
+            $<span id="pricePerMonth">8</span>
+            <span class="text-grey font-semibold text-base">/month</span>
+          </div>
+
+          <!--  slider -->
+          <div class="max-w-md mx-auto w-full my-7 md:my-0">
+            <input class="bg-lilac w-full  mt-6 relative appearance-none h-1.5" type="range" id="pricingSlider" name="pricingSlider" min="0" max="4" value="2">
+          </div>
+       </div>
+
+        <div class="my-12 relative w-full flex justify-center md:justify-end items-center px-2 space-x-2 transition-colors">
+          <label class="relative text-xs" for="pricingType">Monthly Billing</label>
+            <label class="toggle-container relative">
+              <input type="checkbox" class="w-0 h-0 opacity-0" id="pricingType" name="pricingType">
+              <span class="toggle absolute cursor-pointer inset-0 bg-lightPurple"></span>
+            </label>
+          <label class="text-xs" for="pricingType">Yearly Billing</label>
+          <div class="bg-lightOrange rounded-full px-2 py-1 text-xs text-darkOrange">
+            <span class="md:hidden">-</span>25%<span class="hidden md:inline"> discount</span>
+          </div>
+        </div>
+
+        <div class="bg-lightGrey w-full h-0.5 mt-2"></div>
+
+        <div class="mt-10 px-8 flex flex-col md:flex-row items-center md:justify-between text-center">
+          <ul class="text-xs flex flex-col items-center md:items-start">
+            <li class="text-center pb-3 relative flex items-center"><div class="absolute -left-4 w-full"><img src="images/icon-check.svg"></div>Unlimited websites</li>
+            <li class="pb-3 relative flex items-center"><div class="absolute -left-4 w-full"><img src="images/icon-check.svg"></div>100% data ownership</li>
+            <li class="pb-3 relative flex items-center"><div class="absolute -left-4 w-full"><img src="images/icon-check.svg"></div>Email reports</li>
+          </ul>
+
+          <div class="self-center mt-5 md:mt-0">
+            <button class="bg-purple py-3 px-9 rounded-full hover:text-white text-lightPurple">Start my trial</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>

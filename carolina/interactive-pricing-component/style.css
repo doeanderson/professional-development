@@ -1,0 +1,66 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+input[type=range]::-moz-range-thumb {
+  @apply bg-green bg-no-repeat bg-center cursor-pointer h-8 w-8 border-none rounded-full;
+  background-image: url('../images/icon-slider.svg');
+  box-shadow: 0 10px 20px 5px rgba(16, 216, 196, 0.5);
+}
+
+input[type=range]:active::-moz-range-thumb {
+  @apply bg-darkGreen;
+}
+
+input[type=range] {
+  @apply bg-lilac bg-no-repeat;
+  background-image: linear-gradient(#A4F3EB, #A4F3EB);
+  background-size: 0% 100%;
+}
+
+input[type=range]:focus {
+  outline: none;
+}
+
+.toggle-container {
+  width: 45px;
+}
+
+.toggle {
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 34px;
+  width: 43px;
+  height: 22px;
+}
+
+.toggle:before {
+  position: absolute;
+  content: "";
+  height: 14px;
+  width: 14px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 50%;
+}
+
+input:checked + .toggle {
+  @apply bg-lightGreen;
+}
+
+input:checked + .toggle:before {
+  -webkit-transform: translateX(20px);
+  -ms-transform: translateX(20px);
+  transform: translateX(20px);
+}
+
+.image-circles {
+  background-image: url("../images/pattern-circles.svg");
+}
+
+.bg-pattern {
+  background-image: url("../images/bg-pattern.svg");
+}
